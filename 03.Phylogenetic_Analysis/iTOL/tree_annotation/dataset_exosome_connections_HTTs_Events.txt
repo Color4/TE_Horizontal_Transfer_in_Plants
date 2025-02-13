@@ -1,0 +1,282 @@
+DATASET_CONNECTION
+#Connections datasets allow the drawing of straight or curved lines between any two nodes in the tree. Width, color and opacity can be set for each line.
+#Optionally, arrowheads can be displayed on the lines.
+
+#lines starting with a hash are comments and ignored during parsing
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB,SPACE or COMMA).This separator must be used throughout this file.
+#SEPARATOR TAB
+#SEPARATOR SPACE
+SEPARATOR COMMA
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,HTT Events in Plants
+
+#dataset color (can be changed later)
+COLOR,#ff0ff0
+
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+
+#Each dataset can have a legend, which is defined using LEGEND_XXX fields below
+#For each row in the legend, there should be one shape, color and label.
+#Optionally, you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning, do NOT define these values
+#Optionally, shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape, you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically, set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6, or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+#LEGEND_TITLE,Dataset legend
+#LEGEND_SCALE,1
+#LEGEND_POSITION_X,100
+#LEGEND_POSITION_Y,100
+#LEGEND_HORIZONTAL,0
+#LEGEND_SHAPES,1,2,3
+#LEGEND_COLORS,#ff0000,#00ff00,#0000ff
+#LEGEND_LABELS,value1,value2,value3
+#LEGEND_SHAPE_SCALES,1,1,0.5
+
+#if set to 1, arrows will be drawn on the destination end of each connection line
+DRAW_ARROWS,0
+
+#when arrows are displayed, this option sets their size
+ARROW_SIZE,20
+
+#Size of the loops for connections within the same node (ie. when source and destination are the same)
+LOOP_SIZE,100
+
+#maximum width specified in the dataset will be drawn with this value. All other widths will be scaled down proportionally.
+MAXIMUM_LINE_WIDTH,10
+
+#Angle can be any value between -80 and 80. With angle set to 0 lines will be straight.
+CURVE_ANGLE,0
+
+#if CENTER_CURVES is set to 1, center of the tree (in circular display mode only) will be used as the control point for all curves, ignoring 'CURVE_ANGLE'
+CENTER_CURVES,1
+
+#if ALIGN_TO_LABELS is set to 1, connections from/to leaf nodes will start/end next to the leaf label, and not on the branch
+ALIGN_TO_LABELS,1
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#Each line defines a single connection between 2 nodes and consists of the following fields:
+#NODE1,NODE2,WIDTH,COLOR,STYLE,LABEL
+#all connection widths will be normalized based on the MAXIMUM_LINE_WIDTH specified for the whole dataset
+#STYLE defines the connection line style, and can be one of 'normal' or 'dashed'.
+#color can be specified in hexadecimal, RGB or RGBA notation (if transparency is required). Note that you cannot use COMMA as the delimiter if RGB or RGBA color notation is used.
+#1070856,2759587,4,orange,normal,CACTA
+1070856,3712,1,orange,normal,CACTA
+110835,3711,1,orange,normal,Helitron
+112509,32224,1,orange,normal,CACTA
+13818,3712,1,orange,normal,CACTA
+147425,32224,2,orange,normal,Helitron
+147425,3847,1,orange,normal,CACTA
+152371,3847,1,orange,normal,Gypsy
+167791,32224,1,orange,normal,Copia
+180675,3847,2,orange,normal,CACTA
+192012,32224,1,orange,normal,Helitron
+200361,3711,3,orange,normal,CACTA
+200361,3712,1,orange,normal,CACTA
+2182728,3847,1,orange,normal,CACTA
+225117,3711,2,orange,normal,Mariner
+22666,32224,1,orange,normal,CACTA
+22666,3712,1,orange,normal,CACTA
+22666,3847,1,orange,normal,CACTA
+240449,32224,2,orange,normal,Helitron
+240449,3847,1,orange,normal,Gypsy
+252529,36774,1,orange,normal,CACTA
+273540,32224,1,orange,normal,Mutator
+2759587,3711,1,orange,normal,CACTA
+2788,3712,2,orange,normal,CACTA
+29730,3847,2,orange,normal,hAT
+29808,3711,2,orange,normal,CACTA
+29808,3712,2,orange,normal,CACTA
+3014308,3711,1,orange,normal,CACTA
+3014308,3847,2,orange,normal,CACTA
+3014309,3712,1,orange,normal,CACTA
+3014309,3847,2,orange,normal,CACTA
+315347,3847,1,orange,normal,CACTA
+32224,1000413,2,orange,normal,Copia
+32224,112509,1,orange,normal,CACTA
+32224,219896,1,orange,normal,CACTA
+32224,273540,1,orange,normal,Mutator
+32224,2759587,1,orange,normal,Copia
+32224,29808,2,orange,normal,Copia
+32224,4283,1,orange,normal,Helitron
+32224,59490,5,orange,normal,Helitron
+32224,63359,1,orange,normal,Helitron
+32224,63459,1,orange,normal,Mutator
+32224,74645,3,orange,normal,Helitron
+34305,4081,2,orange,normal,Gypsy
+3572,3712,2,orange,normal,Gypsy
+3572,3847,1,orange,normal,Other
+36596,36774,1,orange,normal,Gypsy
+36596,3712,1,orange,normal,Gypsy
+36774,32224,1,orange,normal,CACTA
+36774,3847,1,orange,normal,CACTA
+36774,4577,1,orange,normal,CACTA
+3711,1000413,2,orange,normal,Helitron
+3711,110835,1,orange,normal,Helitron
+3711,112874,1,orange,normal,Gypsy
+3711,200361,1,orange,normal,Other
+3711,2182728,1,orange,normal,CACTA
+3711,219896,1,orange,normal,CACTA
+3711,225117,2,orange,normal,Mariner
+3711,22666,3,orange,normal,CACTA
+3711,236973,1,orange,normal,CACTA
+3711,252529,1,orange,normal,Helitron
+3711,2759587,2,orange,normal,Copia
+3711,29808,11,orange,normal,CACTA
+3711,32224,2,orange,normal,CACTA
+3711,3512,3,orange,normal,CACTA
+3711,3572,3,orange,normal,Helitron
+3711,3847,7,orange,normal,CACTA
+3711,4236,2,orange,normal,Helitron
+3711,4283,2,orange,normal,Helitron
+3711,45249,1,orange,normal,CACTA
+3711,4530,5,orange,normal,CACTA
+3711,4686,2,orange,normal,Helitron
+3711,52838,3,orange,normal,CACTA
+3711,55513,5,orange,normal,Copia
+3711,59490,6,orange,normal,CACTA
+3711,74645,1,orange,normal,Other
+3711,90397,1,orange,normal,CACTA
+3711,99300,1,orange,normal,Helitron
+3712,1000413,4,orange,normal,CACTA
+3712,112874,1,orange,normal,Mutator
+3712,200361,1,orange,normal,CACTA
+3712,212925,2,orange,normal,Helitron
+3712,219896,3,orange,normal,Gypsy
+3712,22666,8,orange,normal,CACTA
+3712,240449,2,orange,normal,Gypsy
+3712,243964,3,orange,normal,Other
+3712,262757,4,orange,normal,CACTA
+3712,273540,1,orange,normal,Other
+3712,2759587,15,orange,normal,CACTA
+3712,29808,20,orange,normal,CACTA
+3712,3075,3,orange,normal,CACTA
+3712,315347,1,orange,normal,CACTA
+3712,32224,5,orange,normal,CACTA
+3712,33114,1,orange,normal,CACTA
+3712,3512,2,orange,normal,CACTA
+3712,3572,8,orange,normal,CACTA
+3712,36596,1,orange,normal,Gypsy
+3712,3750,1,orange,normal,Mutator
+3712,3847,10,orange,normal,CACTA
+3712,38722,1,orange,normal,CACTA
+3712,38727,1,orange,normal,CACTA
+3712,3915,4,orange,normal,CACTA
+3712,4081,1,orange,normal,CACTA
+3712,4084,1,orange,normal,CACTA
+3712,4236,3,orange,normal,Helitron
+3712,4283,1,orange,normal,Helitron
+3712,4530,5,orange,normal,CACTA
+3712,4538,1,orange,normal,CACTA
+3712,4540,1,orange,normal,LINE
+3712,4577,2,orange,normal,CACTA
+3712,4615,5,orange,normal,Other
+3712,461633,1,orange,normal,Other
+3712,4686,12,orange,normal,CACTA
+3712,52838,14,orange,normal,CACTA
+3712,55513,1,orange,normal,Gypsy
+3712,59490,3,orange,normal,Other
+3712,63359,4,orange,normal,CACTA
+3712,63459,1,orange,normal,Other
+3712,74645,3,orange,normal,Helitron
+3750,3847,1,orange,normal,Other
+3847,152371,1,orange,normal,Gypsy
+3847,155640,1,orange,normal,Copia
+3847,2182728,1,orange,normal,CACTA
+3847,22666,2,orange,normal,CACTA
+3847,236973,1,orange,normal,CACTA
+3847,2511006,1,orange,normal,Mutator
+3847,252529,1,orange,normal,Copia
+3847,2759587,5,orange,normal,CACTA
+3847,29730,2,orange,normal,hAT
+3847,29808,4,orange,normal,Copia
+3847,3075,1,orange,normal,CACTA
+3847,32224,1,orange,normal,CACTA
+3847,3512,1,orange,normal,CACTA
+3847,3572,6,orange,normal,Gypsy
+3847,36774,1,orange,normal,CACTA
+3847,3712,2,orange,normal,CACTA
+3847,3726,1,orange,normal,CACTA
+3847,3750,1,orange,normal,Other
+3847,38785,3,orange,normal,CACTA
+3847,3983,1,orange,normal,Mutator
+3847,4236,1,orange,normal,Copia
+3847,4283,2,orange,normal,Copia
+3847,45249,1,orange,normal,CACTA
+3847,4530,3,orange,normal,CACTA
+3847,4540,1,orange,normal,Other
+3847,4577,3,orange,normal,CACTA
+3847,4615,2,orange,normal,Other
+3847,461633,1,orange,normal,Mutator
+3847,4686,6,orange,normal,CACTA
+3847,50273,2,orange,normal,CACTA
+3847,52838,6,orange,normal,CACTA
+3847,55363,1,orange,normal,Mutator
+3847,586398,1,orange,normal,CACTA
+3847,59490,5,orange,normal,CACTA
+3847,63359,5,orange,normal,Gypsy
+3847,94328,1,orange,normal,Gypsy
+3847,99300,1,orange,normal,Other
+3860,3847,1,orange,normal,Helitron
+38722,3712,2,orange,normal,CACTA
+38727,3712,1,orange,normal,CACTA
+3886,3712,1,orange,normal,CACTA
+3891,3711,1,orange,normal,Other
+3891,3712,2,orange,normal,CACTA
+4081,1000413,1,orange,normal,Other
+4081,212925,1,orange,normal,Gypsy
+4081,2511006,1,orange,normal,CACTA
+4081,252529,1,orange,normal,Helitron
+4081,32224,1,orange,normal,CACTA
+4081,3369,1,orange,normal,Gypsy
+4081,3572,1,orange,normal,Gypsy
+4081,36774,1,orange,normal,CACTA
+4081,3691,1,orange,normal,Gypsy
+4081,3712,1,orange,normal,CACTA
+4081,4283,1,orange,normal,Gypsy
+4081,4530,1,orange,normal,Other
+4081,4686,1,orange,normal,Gypsy
+4081,63359,1,orange,normal,Gypsy
+4084,3712,1,orange,normal,Mutator
+43366,3711,1,orange,normal,Other
+4521,3712,1,orange,normal,CACTA
+45249,3711,1,orange,normal,Mutator
+4530,3847,2,orange,normal,CACTA
+4530,4081,2,orange,normal,Other
+4577,3711,1,orange,normal,CACTA
+4615,3712,4,orange,normal,Other
+4615,3847,1,orange,normal,Other
+49390,3712,1,orange,normal,Other
+49495,3712,1,orange,normal,CACTA
+50273,3712,1,orange,normal,CACTA
+50273,3847,1,orange,normal,CACTA
+52838,3712,3,orange,normal,CACTA
+586398,32224,1,orange,normal,Helitron
+63459,32224,2,orange,normal,Mutator
+69332,32224,1,orange,normal,Mutator
+74645,3711,1,orange,normal,Other
+80379,3847,1,orange,normal,Other
