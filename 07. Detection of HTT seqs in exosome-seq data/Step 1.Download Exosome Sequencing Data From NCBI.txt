@@ -1,0 +1,9 @@
+#Search for plant exosome seq data in the NCBI database.
+https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=477334
+
+#Using prefetch Download Data
+prefetch SRR7406459
+
+# Using fastq-dump extracting fasta seq
+fastq-dump SRR7406459 --outdir SRR7406459
+
