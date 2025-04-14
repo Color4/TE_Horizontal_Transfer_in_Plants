@@ -11,4 +11,6 @@ Pipelines and relevant scripts for:
 - 04.HTTs Detection
 - 05.Co-HT Network Analysis
 - 06.HTT Related Gene Enrichment Analysis
+- 07. Detection of HTT seqs in exosome-seq data
+- 08. Search for HTT homologous seqs in NCBI NR DB
 
